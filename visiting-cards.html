@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiting Card Customization</title>
+    <link rel="stylesheet" href="visiting-cards.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="product-page">
+        <!-- Card Flip Section -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <!-- Front of the Card -->
+                <div class="flip-card-front">
+                    <img src="front-visiting-card.jpg" alt="Front of Visiting Card" class="card-image">
+                </div>
+                <!-- Back of the Card -->
+                <div class="flip-card-back">
+                    <img src="back-visiting-card.jpg" alt="Back of Visiting Card" class="card-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h1>Professional Visiting Card</h1>
+            <p>
+                Make a lasting impression with a professional and stylish visiting card. Perfect for businesses, freelancers, and professionals.
+            </p>
+            <ul>
+                <li><strong>Price:</strong> $20 for 100 cards</li>
+                <li><strong>Material:</strong> Premium Matte Finish</li>
+                <li><strong>Size:</strong> 3.5" x 2" (Standard Size)</li>
+                <li><strong>Delivery:</strong> 5-7 Business Days</li>
+            </ul>
+            <p>
+                Customize your visiting card with your name, designation, company details, and logo. Click the link below to provide your details.
+            </p>
+            <a href="https://forms.google.com/example-form-link" target="_blank" class="google-form-link">Customize with Google Form</a>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add event listener to toggle the flip
+        document.querySelector('.flip-card').addEventListener('click', function () {
+            this.classList.toggle('flipped');
+        });
+    </script>
+    <div id="footer"></div>
+</body>
+</html>

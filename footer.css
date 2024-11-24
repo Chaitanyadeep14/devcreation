@@ -1,0 +1,151 @@
+/* General Footer Styles */
+.footer {
+    font-family: 'Arial', sans-serif;
+    color: #636466; /* Neutral gray for text */
+    background-color: #fff; /* White background */
+    padding: 40px 20px;
+    border-top: 1px solid #ddd; /* Subtle border */
+    line-height: 1.6;
+}
+
+/* Help Section */
+.help-section {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.help-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.help-text p {
+    font-size: 1rem;
+    color: #636466;
+}
+
+.help-options {
+    display: flex;
+    gap: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option img {
+    width: 30px;
+    height: 30px;
+}
+
+.option p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+.option a {
+    font-size: 0.9rem;
+    color: #ff8b00; /* Highlight color for links */
+    text-decoration: none;
+}
+
+.option a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Main Content */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.brand-section {
+    flex: 1;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    filter: grayscale(100%); /* Subtle icon color */
+    transition: filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    filter: grayscale(0%); /* Highlight on hover */
+}
+
+.menu-section {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.menu-column a {
+    font-size: 1rem;
+    color: #636466;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.menu-column a:hover {
+    color: #ff8b00; /* Highlight color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd; /* Subtle separator */
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #636466;
+}
+
+.legal-links a {
+    color: #636466;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.legal-links a:hover {
+    color: #ff8b00; /* Highlight color */
+    text-decoration: underline;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devcreations</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js"></script>
+
+</head>
+<body> 
+    <div id="header"></div>
+    <div class="main" >
+        <section class="slider-container" >
+            <div class="slider-images" >
+              <div class="slider-img">
+                <img src="./images/1.svg" alt="1" />
+                <h1>Mike</h1>
+                <!-- <div class="details">
+                  <h2>Mike</h2>
+                  <p>web3 Developer</p>
+                </div> -->
+              </div>
+              <div class="slider-img">
+                <img src="./images/1.svg" alt="2" />
+                <h1>samite</h1>
+                <!-- <div class="details">
+                  <h2>samite</h2>
+                  <p>wordpress Developer</p>
+                </div> -->
+              </div>
+              <div class="slider-img">
+                <img src="./images/1.svg" alt="3" />
+                <h1>hashi</h1>
+                <!-- <div class="details">
+                  <h2>hashi</h2>
+                  <p>java Developer</p>
+                </div> -->
+              </div>
+              <div class="slider-img active">
+                <img src="./images/1.svg" alt="4" />
+                <h1>kaity</h1>
+                <!-- <div class="details">
+                  <h2>kaity</h2>
+                  <p>web Developer</p>
+                </div> -->
+              </div>
+              <div class="slider-img">
+                <img src="./images/1.svg" alt="5" />
+                <h1>lauren</h1>
+                <!-- <div class="details">
+                  <h2>lauren</h2>
+                  <p>php Developer</p>
+                </div> -->
+              </div>
+              <div class="slider-img">
+                <img src="./images/1.svg" alt="6" />
+                <h1>ryan</h1>
+                <!-- <div class="details">
+                  <h2>ryan</h2>
+                  <p>seo Developer</p>
+                </div> -->
+              </div>
+              <div class="slider-img">
+                <img src="./images/1.svg" alt="7" />
+                <h1>dakes</h1>
+                <!-- <div class="details">
+                  <h2>dakes</h2>
+                  <p>sql Developer</p>
+                </div> -->
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="marquee-container">
+          <div class="marquee" id="marquee">
+            <span>Banners</span>
+            <span>🌟</span>
+            <span>Badges</span>
+            <span>🌟</span>
+            <span>T-Shirts</span>
+            <span>🌟</span>
+            <span>Customizable Marquee Animations!</span>
+          </div>
+        </div>
+
+    <!-- Product Page Content -->
+  
+      <!-- <section class="shop-by-category">
+          <h2>Shop by Category</h2>
+          <div class="categories">
+              <div class="category-item">
+                  <img src="images/1.svg" alt="Personal Care">
+                  <span>Personal Care</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/2.svg" alt="Accessories">
+                  <span>Accessories</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/3.svg" alt="Coats">
+                  <span>Coats</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/4.svg" alt="Sweat Pants">
+                  <span>Sweat Pants</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/5.svg" alt="Perfume">
+                  <span>Perfume</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/6.svg" alt="T-Shirt">
+                  <span>T-Shirt</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/7.svg" alt="Sneakers">
+                  <span>Sneakers</span>
+              </div>
+              <div class="category-item">
+                  <img src="images/8.svg" alt="Bags">
+                  <span>Bags</span>
+              </div>
+          </div>
+          <a href="#" class="see-all">See all</a>
+      </section> -->
+        
+      <section class="featured-deals">
+        <h1>Featured Deals</h1>
+        <div class="deals-container">
+            <!-- First Card -->
+            <div class="deal-card">
+                <div class="deal-text">
+                    <h2>Indulge in exclusive deals</h2>
+                    <p>Shop now and enjoy our latest fashion finds.</p>
+                    <button class="deal-button">Shop Now</button>
+                </div>
+                <div class="deal-image">
+                    <img src="./images/6.svg " alt="Fashion Deals">
+                </div>
+            </div>
+            <!-- Second Card -->
+            <div class="deal-card reverse">
+                <div class="deal-image">
+                    <img src="./images/7.svg" alt="Welcome Gift">
+                </div>
+                <div class="deal-text">
+                    <h2>Welcome offer just for you</h2>
+                    <p>Enjoy a special discount on your first purchase.</p>
+                    <button class="deal-button">Get discount</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer"></div>
+    <script src="jQuery.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+
+
+ 
+        // Optionally add dynamic content to the marquee using JavaScript
+        const marquee = document.getElementById('marquee');
+        const messages = [
+          "🔥 Learn HTML, CSS, and JavaScript!",
+          "🎉 Build stunning web designs easily!",
+          "🚀 Join the coding revolution now!"
+        ];
+    
+        setInterval(() => {
+          const newMessage = document.createElement('span');
+          newMessage.textContent = messages[Math.floor(Math.random() * messages.length)];
+          marquee.appendChild(newMessage);
+        }, 5000);
+      </script>
+   
+</body>
+</html>
