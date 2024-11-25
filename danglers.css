@@ -1,0 +1,105 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page Container */
+.product-page {
+    display: flex;
+    justify-content: space-between; /* Place preview and details side by side */
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    background-color: #f9f9f9;
+    gap: 40px; /* Add space between preview and details */
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Product Preview Section */
+.product-preview {
+    flex: 1 1 45%; /* Allocate 45% of the space to the preview */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid #ddd; /* Border for better visibility */
+}
+
+/* Product Details Section */
+.product-details {
+    flex: 1 1 45%; /* Allocate 45% of the space to the details */
+    padding: 20px;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-details p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.product-details ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.product-details ul li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.google-form-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff8b00;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.google-form-link:hover {
+    background-color: #e07a00;
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px;
+    }
+
+    .product-preview,
+    .product-details {
+        flex: 1 1 100%;
+    }
+
+    .product-image {
+        max-width: 90%; /* Reduce image size on smaller screens */
+    }
+}
