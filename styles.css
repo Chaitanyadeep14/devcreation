@@ -339,7 +339,8 @@
   
   .product-item h3 {
     margin-top: 10px;
-    font-size: 1.1em;
-    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #000;
   }
   

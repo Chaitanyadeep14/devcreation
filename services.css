@@ -1,0 +1,121 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Parallax Styles */
+.parallax {
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1920x1080');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.parallax1 {
+    background-image: url('https://via.placeholder.com/1920x1080/ff7f50');
+}
+
+.parallax2 {
+    background-image: url('https://via.placeholder.com/1920x1080/87ceeb');
+}
+
+.parallax3 {
+    background-image: url('https://via.placeholder.com/1920x1080/4682b4');
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+/* Service Sections */
+.service-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.service-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    color: #f57c00;
+}
+
+.service-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service-image {
+    flex: 1;
+    text-align: center;
+}
+
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
