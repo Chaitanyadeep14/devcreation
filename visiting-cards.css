@@ -5,25 +5,20 @@
     font-family: Arial, sans-serif;
 }
 
-.product-page {
-    background-color: #f9f9f9;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
+/* Page Container */
 .product-page {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    background-color: white;
+    justify-content: space-between; /* Evenly distribute space between elements */
+    align-items: center; /* Align items vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 40px;
+    background-color: #f9f9f9;
+    gap: 40px; /* Add spacing between card and details */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center the entire page */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for attractiveness */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 90%;
-    padding: 20px;
+    background-color: #fff;
 }
 
 /* Flip Card Section */
