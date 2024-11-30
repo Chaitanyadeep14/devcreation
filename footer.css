@@ -1,151 +1,137 @@
 /* General Footer Styles */
 .footer {
     font-family: 'Arial', sans-serif;
-    color: #636466; /* Neutral gray for text */
-    background-color: #fff; /* White background */
+    background-color: #424242; /* Dark gray background */
+    color: #ffffff; /* White text */
     padding: 40px 20px;
-    border-top: 1px solid #ddd; /* Subtle border */
-    line-height: 1.6;
 }
 
-/* Help Section */
-.help-section {
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 20px;
-    border-radius: 8px;
+.footer-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.help-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    color: black;
-}
-
-.help-text p {
-    font-size: 1rem;
-    color: #636466;
-}
-
-.help-options {
-    display: flex;
-    gap: 20px;
-}
-
-.option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.option img {
-    width: 30px;
-    height: 30px;
-}
-
-.option p {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-}
-
-.option a {
-    font-size: 0.9rem;
-    color: #ff8b00; /* Highlight color for links */
-    text-decoration: none;
-}
-
-.option a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Main Content */
-.footer-main {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px 0;
-}
-
+/* Brand Section */
 .brand-section {
     flex: 1;
     text-align: center;
 }
 
 .logo {
-    width: 200px;
-    margin-bottom: 15px;
+    width: 250px;
+    margin-bottom: 5px;
 }
 
-.social-icons {
+.brand-section p {
+    font-size: 1.2rem;
+    color: #ff8b00; /* Highlight color */
+    margin: 0;
+}
+
+/* Subscription Section */
+.subscription-section {
+    margin-top: 20px;
+    background-color: none; /* Slightly darker background */
+    padding: 15px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+
+.subscription-section .enquiry-text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subscription-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
-.social-icons img {
-    width: 25px;
-    height: 25px;
-    filter: grayscale(100%); /* Subtle icon color */
-    transition: filter 0.3s ease;
-}
-
-.social-icons img:hover {
-    filter: grayscale(0%); /* Highlight on hover */
-}
-
-.menu-section {
-    flex: 2;
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu-column h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: black;
-}
-
-.menu-column a {
+.subscription-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 300px;
     font-size: 1rem;
-    color: #636466;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 5px;
-    transition: color 0.3s ease;
 }
 
-.menu-column a:hover {
-    color: #ff8b00; /* Highlight color on hover */
-}
-
-/* Footer Bottom */
-.footer-bottom {
+/* Submit Row: Flexbox Layout for Submit and Text */
+.submit-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ddd; /* Subtle separator */
+    width: 100%;
+    max-width: 300px; /* Ensures the layout stays compact */
+    margin-top: 10px;
 }
 
-.footer-bottom p {
+.submit-row button {
+    padding: 10px 20px;
+    background-color: #ff8b00; /* Highlight color */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-row button:hover {
+    background-color: #e67a00;
+    box-shadow: 0px 5px 15px rgba(255, 123, 0, 0.4);
+}
+
+.submit-row .response-text {
     font-size: 0.9rem;
-    color: #636466;
+    color: #ffffff;
+    margin-left: 10px;
+    white-space: nowrap; /* Prevents the text from wrapping */
 }
 
-.legal-links a {
-    color: #636466;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.9rem;
+
+/* Menu Section */
+.menu-section {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
 }
 
-.legal-links a:hover {
+.menu-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
     color: #ff8b00; /* Highlight color */
+}
+
+.menu-column a {
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menu-column a:hover {
     text-decoration: underline;
+}
+
+/* Contacts Section */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
 }

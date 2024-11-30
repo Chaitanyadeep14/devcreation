@@ -149,11 +149,3 @@ p {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 20px;
-}

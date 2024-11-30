@@ -10,13 +10,13 @@
     display: flex;
     justify-content: space-between; /* Evenly distribute space between elements */
     align-items: center; /* Align items vertically */
-    min-height: 100vh; /* Full viewport height */
+    min-height: 90vh; /* Full viewport height */
     padding: 40px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     gap: 40px; /* Add spacing between card and details */
     max-width: 1200px; /* Limit maximum width */
     margin: 0 auto; /* Center the entire page */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for attractiveness */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Subtle shadow for attractiveness */
     border-radius: 8px;
     background-color: #fff;
 }
