@@ -107,7 +107,7 @@
 
 .menu-column h4 {
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #ff8b00; /* Highlight color */
 }
 
@@ -116,22 +116,33 @@
     color: #ffffff;
     text-decoration: none;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 20px; /* Increased gap between links */
 }
 
 .menu-column a:hover {
     text-decoration: underline;
 }
 
-/* Contacts Section */
+
+/* Social Icons Section */
+/* Social Icons Section */
 .social-icons {
-    display: flex;
-    gap: 10px;
+    display: flex; /* Align icons horizontally */
+    gap: 15px; /* Add space between icons */
+    justify-content: center; /* Center the icons */
+    align-items: center; /* Align vertically in case of varying heights */
     margin-top: 10px;
 }
 
 .social-icons img {
     width: 20px;
     height: 20px;
-    filter: invert(100%);
+    filter: brightness(0) invert(1); /* Makes the icon white */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
+
+.social-icons img:hover {
+    filter: none; /* Restores the original colors */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
