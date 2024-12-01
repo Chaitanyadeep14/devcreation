@@ -1,107 +1,189 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
-
-.main {
-  margin-top:60px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Jost", sans-serif;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background-color: #636466;  */
+  color: #ffffff;
 }
-.slider-container{
+
+.slider {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  background-image: url('Images/bg-img.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 80vh; /* Adjusted to 80vh as per your request */
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: contain; /* Ensures the entire image is visible */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  background-position: center; /* Centers the image */
+  transition: opacity 0.8s ease-in-out;
 }
-.slider-images{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+
+.carousel-item.active {
+  opacity: 1;
 }
-.slider-images img{
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  border-radius: 6px;
+
+.carousel-item:nth-child(1) {
+  background-image: url('./images/slide1.svg');
 }
-.slider-img{
-  width: 110px;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  transition: 0.7s ease;
+
+.carousel-item:nth-child(2) {
+  background-image: url('./images/slide2.svg');
 }
-.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
-  height: 480px;
-}
-.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
-  height: 560px;
-}
-.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
-  height: 665px;
-}
-/* h1{
-  font-family: "Jost", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
+
+.carousel-content {
+  max-width: 50%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  border-radius: 10px;
   text-align: left;
-  text-transform: uppercase;
-  color: #fff;
+}
+
+.carousel-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ff8b00;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8b00;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #636466;
+  transform: scale(1.05);
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
   position: absolute;
   top: 50%;
-  left: -10%;
-  transform: rotate(270deg);
-  transition: 0.7s ease;
-} */
-/* .details{
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #636466;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #ff8b00;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.carousel-btn--left {
+  left: 20px;
+}
+
+.carousel-btn--right {
+  right: 20px;
+}
+
+/* Dots navigation */
+.carousel-dots {
   position: absolute;
-  bottom: 43px;
-  left: 43px;
-} */
-/* .details h2{
-  font-family: "Jost", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  text-align: left;
-  line-height: 44px;
-  text-align: left;
-  color: #fff;
-  text-transform: uppercase;
-  transition: 0.7s ease;
-  display: none;
-} */
-/* .details p{
-  font-family: "Jost", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: left;
-  line-height: 33px;
-  text-align: left;
-  color: #fff;
-  text-transform: uppercase;
-  transition: 0.7s ease;
-  display: none;
-} */
-.slider-img.active{
-  width: 766px !important;
-  height: 750px !important;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
 }
-.slider-img.active h1{
-   display: none;
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.slider-img.active .details p, .slider-img.active .details h2{
-  display: block;
+
+.dot.active {
+  background-color: #ff8b00;
 }
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .carousel-content {
+    max-width: 70%;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-content {
+      max-width: 70%;
+  }
+
+  .carousel-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .carousel-content p {
+      font-size: 1rem;
+  }
+
+  .btn {
+      font-size: 0.9rem;
+  }
+}
+
 
 /* marque code */
 .marquee-container {
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #ff8b00, #636466);
     color: white;
     padding: 10px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -216,72 +298,104 @@
     font-size: 2em;
     margin-bottom: 20px;
 }
-
 .deals-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .deal-card {
-    display: flex;
-    align-items: center;
-    background-color: #e6f7ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 45%;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 46.5%;
+  
+ 
+  gap: 20px;
+}
+
+/* First deal-card with a gradient background */
+.deal-card:first-child {
+  background: linear-gradient( #C36C77 17%, #C36C77 50%,#5D3439 100%);
+}
+
+/* Second deal-card with a different gradient background */
+.deal-card:last-child {
+  background: linear-gradient(#1f2224 0%, #131313 100%);
 }
 
 .deal-card.reverse {
-    flex-direction: row-reverse;
+  background: #7FBFE1;
+  flex-direction: row-reverse;
 }
-
+.deal-card.reverse h2{
+  font-size: 1.8em;
+  color: #251B1B;
+  margin-bottom: 10px;
+}
+.deal-card.reverse p {
+  font-size: 1em;
+  color: #251B1B;
+  margin-bottom: 20px;
+}
 .deal-text {
-    flex: 1;
-    padding: 10px;
-    text-align: left;
+  flex: 1;
+  padding: 10px;
+  text-align: left;
 }
 
 .deal-text h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #f6f2f2;
+  margin-bottom: 10px;
 }
 
 .deal-text p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 20px;
+  font-size: 1em;
+  color: #FFACB7;
+  margin-bottom: 20px;
+}
+.deal-card.reverse button {
+  background-color: #fff;
+  color: #7FBFE1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .deal-button {
-    background-color: #0078d7;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #fff;
+  color: #FFACB7;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .deal-button:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
 .deal-image {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
+  
 }
 
 .deal-image img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
+  
 }
+
 
 
 
@@ -290,6 +404,7 @@
 .explore{
     font-family: Arial, sans-serif;
     margin: 0;
+    
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
@@ -343,4 +458,3 @@
     font-size: 1.5em;
     color: #000;
   }
-  

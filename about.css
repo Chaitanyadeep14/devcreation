@@ -65,47 +65,5 @@ p {
   color: #F59F0E; /* Optional hover effect */
 }
 
-/* About Section */
-.about-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.intro, .approach, .vision-mission {
-    margin-bottom: 40px;
-}
-
-.intro h2, .approach h2, .vision h2, .mission h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.intro p, .approach p, .vision p, .mission p {
-    font-size: 1rem;
-    color: #636466; /* Gray text */
-}
-
-/* Vision and Mission Section */
-.vision-mission {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.vision, .mission {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9; /* Light gray background */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.vision h2, .mission h2 {
-    font-size: 1.6rem;
-}
-
-
-
 
 
