@@ -9,18 +9,19 @@
 /* Page Container */
 .product-page {
     display: flex;
-    justify-content: space-between; /* Place preview and details side by side */
-    align-items: center;
-    min-height: 90vh;
+    justify-content: space-between; /* Evenly distribute space between elements */
+    align-items: center; /* Align items vertically */
+    min-height: 90vh; /* Full viewport height */
     padding: 40px;
-    background-color: #fff;
-    gap: 40px; /* Add space between preview and details */
-    max-width: 1200px;
-    margin: 0 auto;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    gap: 40px; /* Add spacing between card and details */
+    max-width: auto; /* Limit maximum width */
+    margin: 0 auto; /* Center the entire page */
     border-radius: 8px;
-    background-color: #fff;
+    background: url('./images/devbg.jpg') no-repeat center center; /* Use an image as the background */
+    background-size: cover; /* Ensure the image covers the entire area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for focus */
 }
+
 
 /* Product Preview Section */
 .product-preview {

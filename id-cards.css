@@ -13,14 +13,15 @@
     align-items: center; /* Align items vertically */
     min-height: 90vh; /* Full viewport height */
     padding: 40px;
-    background-color: #fff;
     gap: 40px; /* Add spacing between card and details */
-    max-width: 1200px; /* Limit maximum width */
+    max-width: auto; /* Limit maximum width */
     margin: 0 auto; /* Center the entire page */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Subtle shadow for attractiveness */
     border-radius: 8px;
-    background-color: #fff;
+    background: url('./images/devbg.jpg') no-repeat center center; /* Use an image as the background */
+    background-size: cover; /* Ensure the image covers the entire area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for focus */
 }
+
 
 /* Flip Card Section */
 .flip-card {
@@ -33,7 +34,7 @@
 
 .flip-card-inner {
     position: relative;
-    width: 55%; /* Updated width for realistic vertical card */
+    width: 40%; /* Updated width for realistic vertical card */
     height: 450px; /* Updated height for realistic proportions */
     transition: transform 0.6s ease-in-out; /* Smooth flipping animation */
     transform-style: preserve-3d; /* Preserve 3D space */
