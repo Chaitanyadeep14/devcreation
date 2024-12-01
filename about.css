@@ -18,6 +18,7 @@ p {
     font-size: 1rem;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
 /* Hero Banner Section */
 .hero-banner {
   position: relative;
@@ -64,6 +65,162 @@ p {
 .hero-banner a:hover {
   color: #F59F0E; /* Optional hover effect */
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8eaef;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+}
+
+section {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 5rem 2rem;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: clamp(3rem, 2.4286rem + 2.2857vw, 5rem);
+  color: #111;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+section p {
+  line-height: 1.7;
+  color: #454545;
+  max-width: 70rem;
+  margin: 0 auto 2rem auto;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+}
+
+.cards {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  text-align: left;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 300px; /* Set a fixed height for all images */
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
 
 
+.card-img-wrapper img:hover {
+  filter: grayscale(0%);
+}
 
+.social-icon {
+  background: #111;
+  padding: 1rem;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.social-icon i {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.social-icon:hover i {
+  color: #003ef5;
+}
+
+.card-content-wrapper {
+  padding: 1.5rem;
+  background: white;
+  transition: background 0.5s ease;
+}
+
+.card-content-wrapper:hover {
+  background: #FF8b00;
+}
+
+.card-content-wrapper h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.card-content-wrapper p {
+  font-size: 0.9rem;
+  color: #454545;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.card-content-wrapper:hover h3,
+.card-content-wrapper:hover p {
+  color: #fff;
+}
+
+.card-content-wrapper svg {
+  display: block;
+  width: 24px;
+  margin-left: auto;
+  color: #003ef5;
+  transition: color 0.3s ease;
+}
+
+.card-content-wrapper:hover svg {
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-content-wrapper {
+    text-align: center;
+  }
+
+  .card-content-wrapper h3,
+  .card-content-wrapper p {
+    text-align: center;
+  }
+}
