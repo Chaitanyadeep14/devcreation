@@ -10,37 +10,47 @@
 
 </head>
 <body> 
-    <div id="header"></div>
 
+   <!-- Video Preloader -->
+   <div id="video-preloader">
+    <video id="preloader-video" autoplay muted playsinline>
+      <source src="./images/Logo Clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
+    <div id="main-content" style="display: none;">
+      <div id="header"></div>
 
     <div class="slider">
-        <div class="carousel">
-            <div class="carousel-item active">
-                <!-- <div class="carousel-content">
-                    <h1>website</h1>
-                    <p>website</p>
-                    <a href="https://store.acer.com/en-in/laptops/gaming/predator-helios"
-                       class="btn btn--primary">Buy Now</a>
-                </div> -->
-            </div>
-            <div class="carousel-item">
-                <!-- <div class="carousel-content">
-                    <h1>Predator Triton</h1>
-                    <p>Starting From ₹89990</p>
-                    <a href="https://store.acer.com/en-in/laptops/gaming/predator-triton"
-                       class="btn btn--primary">Buy Now</a>
-                </div> -->
-            </div>
-        </div>
-        <button id="prev" class="carousel-btn carousel-btn--left">&lt;</button>
-        <button id="next" class="carousel-btn carousel-btn--right">&gt;</button>
-        <div class="carousel-dots">
-          <span class="dot active" data-index="0"></span>
-          <span class="dot" data-index="1"></span>
-          <!-- Add more dots for additional slides -->
+      <div class="carousel">
+          <div class="carousel-item active">
+              <!-- <div class="carousel-content">
+                  <h1>website</h1>
+                  <p>website</p>
+                  <a href="https://store.acer.com/en-in/laptops/gaming/predator-helios"
+                     class="btn btn--primary">Buy Now</a>
+              </div> -->
+          </div>
+          <div class="carousel-item">
+              <!-- <div class="carousel-content">
+                  <h1>Predator Triton</h1>
+                  <p>Starting From ₹89990</p>
+                  <a href="https://store.acer.com/en-in/laptops/gaming/predator-triton"
+                     class="btn btn--primary">Buy Now</a>
+              </div> -->
+          </div>
       </div>
+      <button id="prev" class="carousel-btn carousel-btn--left">&lt;</button>
+      <button id="next" class="carousel-btn carousel-btn--right">&gt;</button>
+      <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <!-- Add more dots for additional slides -->
     </div>
+  </div>
+
+    
 
 
 
@@ -97,53 +107,105 @@
                 </div>
             </div>
             <div class="opt">
-              <img src="./images/opt 2.jpg" alt="Welcome" style="width: 1400px;height:500px">
+              <img src="./images/opt 2.png" alt="Welcome" style="width: 1400px;height:500px">
             </div>
         </div>
     </section>
 
-      <section class="explore">
-    <div class="container">
-      <h1>EXPLORE THE RANGE</h1>
-      <p>Browse through our products</p>
-      
-      <div class="products">
-        <div class="product-item">
-          <h3>T-Shirts</h3>
-          <img src="./images/gt 1.svg" alt="T-Shirts">
+    <section class="explore">
+      <div class="container">
+        <h1>EXPLORE THE RANGE</h1>
+        <p>Browse through our products</p>
+        
+        <div class="products" id="products-container">
+          <!-- Main products -->
+          <div class="product-item">
+            <h3>T-Shirts</h3>
+            <img src="./images/gt 1.svg" alt="T-Shirts">
+          </div>
+          <div class="product-item">
+            <h3>Badges</h3>
+            <img src="./images/Clip path group.png" alt="Badges">
+          </div>
+          <div class="product-item">
+            <h3>Letterheads</h3>
+            <img src="./images/letter.svg" alt="Letterheads">
+          </div>
+          <div class="product-item">
+            <h3>Banners</h3>
+            <img src="./images/banner.svg" alt="Banners">
+          </div>
+          <div class="product-item">
+            <h3>Visiting Cards</h3>
+            <img src="./images/front-visiting-card.png" alt="Visiting Cards">
+          </div>
+          <div class="product-item">
+            <h3>Certificates</h3>
+            <img src="./images/certi.svg" alt="Certificates">
+          </div>
           
+          <!-- Hidden Extra Products -->
+          <div class="extra-products">
+            <div class="product-item">
+              <h3>Posters</h3>
+              <img src="./images/posters.svg" alt="Posters">
+            </div>
+            <div class="product-item">
+              <h3>Mugs</h3>
+              <img src="./images/mugs.svg" alt="Mugs">
+            </div>
+            <div class="product-item">
+              <h3>Stickers</h3>
+              <img src="./images/stickers.svg" alt="Stickers">
+            </div>
+            <div class="product-item">
+              <h3>Notebooks</h3>
+              <img src="./images/notebooks.svg" alt="Notebooks">
+            </div>
+          </div>
         </div>
-        <div class="product-item">
-          <h3>Badges</h3>
-          <img src="./images/Clip path group.png" alt="Badges">
-          
-        </div>
-        <div class="product-item">
-          <h3>Letterheads</h3>
-          <img src="./images/letter.svg" alt="Letterheads">
-          
-        </div>
-        <div class="product-item">
-          <h3>Banners</h3>
-          <img src="./images/banner.svg" alt="Banners">
-          
-        </div>
-        <div class="product-item">
-          <h3>Table Calendars</h3>
-          <img src="./images/cal.svg" alt="Table Calendars">
-          
-        </div>
-        <div class="product-item">
-          <h3>Certificates</h3>
-          <img src="./images/certi.svg" alt="Certificates">
-          
-        </div>
+    
+        <!-- Explore More Button -->
+        <button id="explore-more" class="explore-more-btn">Explore More</button>
       </div>
-    </div>
-  </section>
+    </section>
+    
+    
+    
     <div id="footer"></div>
+    </div>
+
     <script src="jQuery.js"></script>
     <script>
+
+
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("video-preloader");
+        const mainContent = document.getElementById("main-content");
+        const video = document.getElementById("preloader-video");
+      
+        // Check if the video has already been played
+        const videoPlayed = sessionStorage.getItem("videoPlayed");
+      
+        if (videoPlayed === "true") {
+          // Skip the video and show the main content
+          preloader.style.display = "none";
+          mainContent.style.display = "block";
+        } else {
+          // Play the video for the first visit
+          video.addEventListener("ended", () => {
+            preloader.style.display = "none"; // Hide the preloader
+            mainContent.style.display = "block"; // Show the main content
+      
+            // Mark the video as played in sessionStorage
+            sessionStorage.setItem("videoPlayed", "true");
+          });
+        }
+      });
+      
+
+
       jQuery(document).ready(function ($) {
         $(".slider-img").on("click", function () {
           $(".slider-img").removeClass("active");
@@ -199,6 +261,27 @@ dots.forEach((dot, index) => {
         updateCarousel();
     });
 });
+
+
+
+
+document.getElementById('explore-more').addEventListener('click', function () {
+  const extraProducts = document.querySelector('.extra-products');
+  const button = document.getElementById('explore-more');
+
+  // Toggle the visibility of extra products
+  if (extraProducts.style.display === 'none' || extraProducts.style.display === '') {
+    extraProducts.style.display = 'grid'; // Show extra products
+    button.textContent = 'Show Less'; // Change button text
+  } else {
+    extraProducts.style.display = 'none'; // Hide extra products
+    button.textContent = 'Explore More'; // Reset button text
+  }
+});
+
+
+
+
       </script>
 
 
