@@ -11,14 +11,13 @@
     <div id="header"></div>
 
        <!-- Hero Banner Container -->
-       <section class="hero-banner">
+    <section class="hero-banner">
         <div class="overlay">
-          <h1>About Us</h1>
-          <p><a href="index.html">Home</a> » About Us</p>
+            <h1>About Us</h1>
+            <p><a href="index.html">Home</a> » About Us</p>
         </div>
-      </section>
-      
-    
+    </section>
+        
 
     <main class="team-section">
         <section class="team">
@@ -145,6 +144,89 @@
         </section>
     </main>
 
+    <section id="collaborators" class="collaborators-section">
+        <h2>Our Collaborators</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./images/Tridala-Logo.webp" alt="Collaborator 1">
+                </div>
+                <div class="slide">
+                    <img src="./images/Mahaveer-Logo.png" alt="Collaborator 2">
+                </div>
+                <div class="slide">
+                    <img src="./images/GCS-Logo.png" alt="Collaborator 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelector(".slides");
+            const slide = document.querySelectorAll(".slide");
+            const totalSlides = slide.length;
+        
+            let currentIndex = 0;
+        
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        
+            // Auto-slide every 3 seconds
+            setInterval(nextSlide, 3000);
+        });
+        
+        
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const stats = document.querySelectorAll(".stat-number");
+            let hasAnimated = false;
+        
+            function animateNumbers() {
+                stats.forEach(stat => {
+                    const target = +stat.getAttribute("data-target");
+                    const increment = target / 100;
+        
+                    let current = 0;
+        
+                    const updateNumber = () => {
+                        current += increment;
+        
+                        if (current >= target) {
+                            stat.textContent = target + (target % 1 !== 0 ? "+" : "");
+                        } else {
+                            stat.textContent = Math.ceil(current);
+                            requestAnimationFrame(updateNumber);
+                        }
+                    };
+        
+                    updateNumber();
+                });
+            }
+        
+            function checkVisibility() {
+                const section = document.querySelector("#statistics");
+                const rect = section.getBoundingClientRect();
+        
+                if (rect.top < window.innerHeight && !hasAnimated) {
+                    hasAnimated = true;
+                    animateNumbers();
+                    stats.forEach(stat => {
+                        stat.style.opacity = "1";
+                        stat.style.transform = "translateY(0)";
+                    });
+                }
+            }
+        
+            window.addEventListener("scroll", checkVisibility);
+            checkVisibility();
+        });
+        
+    </script>
     
 
     <div id="footer"></div>
