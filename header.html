@@ -3,34 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="header.css">
 </head>
 <body>
-    <nav class="navbar">
-        <!-- Logo Section -->
+    <!-- Desktop Navbar -->
+    <nav class="navbar desktop-navbar">
         <div class="navbar-logo">
             <img src="./images/main-logo.png" alt="Company Logo" class="logo">
         </div>
-
-            <!-- Search Bar -->
-            <div class="navbar-search">
-                <input type="text" placeholder="Search..." class="search-bar">
-            </div>
-        
-    
-
-        <!-- Quick Links Section -->
         <div class="navbar-links">
             <a href="index.html" class="nav-link">Home</a>
             <a href="services.html" class="nav-link">Services</a>
-            <div class="nav-link dropdown">Products
-                 <div class="dropdown-menu">
+            <div class="nav-link dropdown">
+                Products
+                <div class="dropdown-menu">
                     <a href="t-shirts.html" class="dropdown-item">T-Shirts</a>
                     <a href="banners.html" class="dropdown-item">Banners</a>
                     <a href="badges.html" class="dropdown-item">Badges</a>
                     <a href="certificates.html" class="dropdown-item">Certificates</a>
-                    <!-- <a href="danglers.html" class="dropdown-item">Danglers</a> -->
                     <a href="letter-heads.html" class="dropdown-item">Letterheads</a>
                     <a href="visiting-cards.html" class="dropdown-item">Visiting Cards</a>
                     <a href="id-cards.html" class="dropdown-item">ID Cards</a>
@@ -40,9 +31,6 @@
             <a href="about.html" class="nav-link">About Us</a>
             <a href="contact.html" class="nav-link">Contact Us</a>
         </div>
-
-        
-        <!-- Icon Section -->
         <div class="navbar-icons">
             <div class="icon">
                 <img src="./images/wishlist-icon.png" alt="Wishlist" title="Wishlist">
@@ -55,5 +43,60 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navbar -->
+    <nav class="mobile-navbar">
+        <div class="mobile-navbar-container">
+            <div class="mobile-navbar-logo">
+                <img src="./images/main-logo.png" alt="Company Logo" class="logo">
+            </div>
+            <div class="mobile-navbar-hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="mobile-navbar-links" id="mobile-navbar-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <div class="mobile-nav-link dropdown">
+                <span>Products</span>
+                <div class="mobile-dropdown-menu">
+                    <a href="t-shirts.html" class="mobile-dropdown-item">T-Shirts</a>
+                    <a href="banners.html" class="mobile-dropdown-item">Banners</a>
+                    <a href="badges.html" class="mobile-dropdown-item">Badges</a>
+                    <a href="certificates.html" class="mobile-dropdown-item">Certificates</a>
+                    <a href="letter-heads.html" class="mobile-dropdown-item">Letterheads</a>
+                    <a href="visiting-cards.html" class="mobile-dropdown-item">Visiting Cards</a>
+                    <a href="id-cards.html" class="mobile-dropdown-item">ID Cards</a>
+                </div>
+            </div>
+            <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbarLinks = document.getElementById('mobile-navbar-links');
+            const dropdowns = document.querySelectorAll('.mobile-nav-link.dropdown');
+
+            // Toggle the hamburger menu
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                navbarLinks.classList.toggle('open');
+            });
+
+            // Toggle dropdown menus
+            dropdowns.forEach(dropdown => {
+                const menu = dropdown.querySelector('.mobile-dropdown-menu');
+                dropdown.addEventListener('click', () => {
+                    menu.classList.toggle('open');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

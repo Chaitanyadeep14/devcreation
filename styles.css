@@ -1,8 +1,6 @@
-/* Global Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  /* background-color: #636466;  */
   color: #ffffff;
 }
 
@@ -31,55 +29,52 @@ body {
   display: none;
 }
 
-
-
+/* Slider */
 .slider {
   position: relative;
   width: 100%;
-  height: 80vh; /* Adjusted to 80vh as per your request */
+  height: 80vh; /* Adjust to fit large screens */
   overflow: hidden;
 }
 
 .carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease-in-out; /* Faster transition */
 }
 
 .carousel-item {
-  position: relative;
   width: 100%;
   height: 100%;
   flex-shrink: 0;
+  background-size: cover; /* Fill the entire space */
+  background-position: center;
+  transition: opacity 0.5s ease; /* Faster fade effect */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: contain; /* Ensures the entire image is visible */
-  background-repeat: no-repeat; /* Prevents image tiling */
-  background-position: center; /* Centers the image */
-  transition: opacity 0.8s ease-in-out;
-}
-
-.carousel-item.active {
-  opacity: 1;
+ 
 }
 
 .carousel-item:nth-child(1) {
-  background-image: url('./images/slide1.svg');
+  background-image: url('./images/banner1.svg'); /* Use optimized image formats */
 }
 
 .carousel-item:nth-child(2) {
-  background-image: url('./images/slide2.svg');
+  background-image: url('./images/banner2.svg');
 }
 
+.carousel-item:nth-child(3) {
+  background-image: url('./images/banner3.svg');
+}
+
+
 .carousel-content {
-  max-width: 50%;
+  max-width: 60%; /* Wider text area for large screens */
   padding: 20px;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   border-radius: 10px;
-  text-align: left;
 }
 
 .carousel-content h1 {
@@ -133,6 +128,79 @@ body {
   color: #ffffff;
   transform: scale(1.1);
 }
+
+/* Responsive Design */
+/* Tablet View */
+@media (max-width: 1024px) {
+  .slider {
+    height: 70vh; /* Reduce height for tablets */
+  }
+
+  .carousel-content {
+    max-width: 80%; /* Adjust text width */
+    text-align: center;
+  }
+
+  .carousel-content h1 {
+    font-size: 2rem; /* Smaller text size */
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .slider {
+    height: 60vh; /* Further reduce height for mobile */
+  }
+
+  .carousel-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .slider {
+    height: 50vh;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
 
 .carousel-btn--left {
   left: 20px;
@@ -504,4 +572,219 @@ p {
 
 .explore-more-btn:hover {
   background-color: #636466;
+}
+
+
+/* WhatsApp Floating Icon */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1000;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float i {
+  margin-top: 16px;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebd59;
+}
+/* For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Adjust carousel content width */
+  .carousel-content {
+    max-width: 80%;
+  }
+
+  .carousel-content h1 {
+    font-size: 2rem; /* Slightly smaller font size */
+  }
+
+  .carousel-content p {
+    font-size: 1.1rem; /* Reduce paragraph size */
+  }
+
+  .btn {
+    font-size: 1rem; /* Slightly smaller button text */
+  }
+
+  /* Adjust product grid for 2 columns */
+  .products, .extra-products {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  /* Adjust deals container */
+  .deals-container {
+    flex-direction: column; /* Stack deals vertically */
+  }
+
+  .deal-card {
+    width: 100%; /* Make deal cards full width */
+    margin-bottom: 20px; /* Add spacing between stacked cards */
+  }
+
+  /* Adjust marquee */
+  .marquee span {
+    font-size: 1.2rem; /* Reduce font size */
+  }
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Adjust slider height */
+  .slider {
+    height: 60vh; /* Reduce slider height */
+  }
+
+  .carousel-content {
+    max-width: 90%; /* Use most of the screen width */
+    text-align: center; /* Center align text */
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem; /* Smaller font size for paragraphs */
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Smaller button text */
+    padding: 8px 16px; /* Reduce button padding */
+  }
+
+  /* Stack buttons vertically */
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem; /* Smaller icons */
+  }
+
+  /* Adjust product grid for 1 column */
+  .products, .extra-products {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  /* Featured deals */
+  .deals-container {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .deal-card {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 20px; /* Add spacing */
+  }
+
+  .deal-text h2 {
+    font-size: 1.5rem; /* Adjust headline size */
+  }
+
+  .deal-text p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  /* Adjust marquee text */
+  .marquee span {
+    font-size: 1rem; /* Smaller text for marquee */
+  }
+
+  /* Adjust category items */
+  .categories {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for categories */
+    gap: 15px; /* Reduce gap */
+  }
+
+  .category-item {
+    width: 100%; /* Full width for category items */
+  }
+
+  .category-item img {
+    width: 50px; /* Slightly larger images */
+    height: 50px;
+  }
+
+  .category-item span {
+    font-size: 0.8rem; /* Smaller text */
+  }
+
+  /* Explore button */
+  .explore-more-btn {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 8px 16px; /* Reduce padding */
+  }
+}
+
+/* For Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Adjust slider height */
+  .slider {
+    height: 50vh; /* Further reduce slider height */
+  }
+
+  .carousel-content h1 {
+    font-size: 1.2rem; /* Smaller headings */
+  }
+
+  .carousel-content p {
+    font-size: 0.8rem; /* Smaller paragraphs */
+  }
+
+  /* Buttons */
+  .btn {
+    font-size: 0.7rem; /* Small button text */
+    padding: 6px 12px; /* Reduce button padding */
+  }
+
+  /* Deal cards */
+  .deal-card {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center align text */
+  }
+
+  .deal-image img {
+    width: 80%; /* Reduce image size */
+    margin: 0 auto; /* Center image */
+  }
+
+  .deal-text h2 {
+    font-size: 1.2rem; /* Smaller text size */
+  }
+
+  .deal-text p {
+    font-size: 0.8rem; /* Smaller paragraph text */
+  }
+
+  /* Marquee */
+  .marquee span {
+    font-size: 0.8rem; /* Smaller text */
+    margin: 0 20px; /* Reduce spacing */
+  }
+
+  /* Product items */
+  .product-item h3 {
+    font-size: 1rem; /* Smaller headlines */
+  }
+
+  .product-item img {
+    max-width: 80%; /* Reduce image size */
+  }
+
+  .product-item span {
+    font-size: 0.7rem; /* Smaller text */
+  }
+
+  /* Explore button */
+  .explore-more-btn {
+    font-size: 0.8rem; /* Smaller button */
+  }
 }

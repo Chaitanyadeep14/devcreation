@@ -22,7 +22,7 @@
 
 .logo {
     width: 250px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .brand-section p {
@@ -34,10 +34,6 @@
 /* Subscription Section */
 .subscription-section {
     margin-top: 20px;
-    background-color: none; /* Slightly darker background */
-    padding: 15px;
-    border-radius: 10px;
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
     text-align: center;
 }
 
@@ -63,13 +59,12 @@
     font-size: 1rem;
 }
 
-/* Submit Row: Flexbox Layout for Submit and Text */
 .submit-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 300px; /* Ensures the layout stays compact */
+    max-width: 300px;
     margin-top: 10px;
 }
 
@@ -95,7 +90,6 @@
     margin-left: 10px;
     white-space: nowrap; /* Prevents the text from wrapping */
 }
-
 
 /* Menu Section */
 .menu-section {
@@ -123,14 +117,12 @@
     text-decoration: underline;
 }
 
-
-/* Social Icons Section */
 /* Social Icons Section */
 .social-icons {
-    display: flex; /* Align icons horizontally */
-    gap: 15px; /* Add space between icons */
-    justify-content: center; /* Center the icons */
-    align-items: center; /* Align vertically in case of varying heights */
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -138,7 +130,7 @@
     width: 20px;
     height: 20px;
     filter: brightness(0) invert(1); /* Makes the icon white */
-    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons img:hover {
@@ -146,3 +138,86 @@
     transform: scale(1.1); /* Slight zoom effect */
 }
 
+/* Copyright Section */
+.footer-copyright {
+    background-color: #424242; /* Slightly darker shade for separation */
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 0.9rem;
+    color: #ffffff; /* White text */
+    margin-top: 30px;
+    border-top: 1px solid #555555; /* Subtle border for separation */
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu-column {
+        flex: 1 1 40%; /* Each column takes 40% of the space */
+        margin-bottom: 20px;
+    }
+
+    .subscription-section {
+        margin-top: 30px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+    }
+
+    .menu-section {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu-column {
+        flex: none; /* Columns stack on top of each other */
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 200px; /* Adjust logo size for smaller screens */
+    }
+
+    .subscription-form input[type="email"] {
+        width: 90%; /* Take more width on smaller screens */
+    }
+
+    .submit-row {
+        flex-direction: column; /* Stack button and response text vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .submit-row .response-text {
+        margin-left: 0; /* Remove margin for better alignment */
+    }
+}
