@@ -10,6 +10,7 @@
     <link rel="preload" as="image" href="./images/banner1.webp">
 
 </head>
+
 <body> 
 
    <!-- Video Preloader -->
@@ -23,20 +24,26 @@
     <div id="main-content" style="display: none;">
       <div id="header"></div>
 
-      <div class="slider">
-        <div class="carousel">
-          <div class="carousel-item active"></div>
-          <div class="carousel-item"></div>
-          <div class="carousel-item"></div>
-        </div>
-        <button id="prev" class="carousel-btn carousel-btn--left">&lt;</button>
-        <button id="next" class="carousel-btn carousel-btn--right">&gt;</button>
-        <div class="carousel-dots">
-          <span class="dot active" data-index="0"></span>
-          <span class="dot" data-index="1"></span>
-          <span class="dot" data-index="2"></span>
-        </div>
+         <!-- Desktop Carousel -->
+    <div class="slider" style="position: relative; width: 100%; height: 80vh; overflow: hidden; display: none;">
+      <div class="carousel" style="display: flex; height: 100%; width: 100%; transition: transform 0.3s ease-in-out;">
+        <div class="carousel-item active" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner1.svg');"></div>
+        <div class="carousel-item" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner2.svg');"></div>
+        <div class="carousel-item" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner3.svg');"></div>
       </div>
+      <button id="prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&lt;</button>
+      <button id="next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&gt;</button>
+      <div class="carousel-dots" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
+        <span class="dot active" data-index="0" style="width: 10px; height: 10px; background-color: #000; border-radius: 50%; cursor: pointer;"></span>
+        <span class="dot" data-index="1" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
+        <span class="dot" data-index="2" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
+      </div>
+    </div>
+
+    <!-- Mobile Image -->
+    <div class="mobile-image" style="display: none; text-align: center; padding: 20px;  ;">
+      <img src="./images/banner1.svg" alt="Mobile Banner" style="max-width: 100%; height: 40vh; border-radius:10px">
+    </div>
 
       <div class="marquee-container">
         <div class="marquee" id="marquee">
@@ -90,17 +97,17 @@
           <h1>EXPLORE THE RANGE</h1>
           <p>Browse through our products</p>
           <div class="products" id="products-container">
-            <a href="t-shirts.html">
+            <a href="t-shirts.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>T-Shirts</h3><img src="./images/gt 1.svg" alt="T-Shirts"></div></a>
-            <a href="badges.html">
+            <a href="badges.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>Badges</h3><img src="./images/Clip path group.png" alt="Badges"></div></a>
-            <a href="letter-heads.html">
+            <a href="letter-heads.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>Letterheads</h3><img src="./images/Letterhead.png" alt="Letterheads"></div></a>
-            <a href="banners.html">
+            <a href="banners.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>Banners</h3><img src="./images/banner.svg" alt="Banners"></div></a>
-            <a href="visiting-cards.html">
+            <a href="visiting-cards.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>Visiting Cards</h3><img src="./images/id.png" alt="Visiting Cards"></div></a>
-            <a href="certificates.html">
+            <a href="certificates.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>Certificates</h3><img src="./images/certi.svg" alt="Certificates"></div></a>
           </div>
           <div class="extra-products" style="display: none;">
@@ -110,7 +117,7 @@
            
             <div class="product-item"><h3>Stickers</h3><img src="./images/sticker.png" alt="Stickers"></div>
             <div class="product-item"><h3>Notebooks</h3><img src="./images/notebooks.svg" alt="Notebooks"></div>
-            <a href="id-cards.html">
+            <a href="id-cards.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>ID Cards</h3><img src="./images/idcard.png" alt="ID Cards"></div></a>
             <div class="product-item"><h3>Table Calenders</h3><img src="./images/cal.svg" alt="Calenders"></div>
           </div>
@@ -134,6 +141,8 @@
         const mainContent = document.getElementById("main-content");
         const video = document.getElementById("preloader-video");
         const videoPlayed = sessionStorage.getItem("videoPlayed");
+        const desktopCarousel = document.querySelector('.slider');
+        const mobileImage = document.querySelector('.mobile-image');
 
         if (videoPlayed === "true") {
           preloader.style.display = "none";
@@ -144,6 +153,12 @@
             mainContent.style.display = "block";
             sessionStorage.setItem("videoPlayed", "true");
           });
+        }
+        // Toggle carousel and image based on screen size
+        if (window.innerWidth > 768) {
+          desktopCarousel.style.display = "block";
+        } else {
+          mobileImage.style.display = "block";
         }
       });
 
