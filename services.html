@@ -105,5 +105,17 @@
         </a>
   
         <div id="footer"></div>
+
+        <script>
+                document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const mobileLinks = document.getElementById("mobile-navbar-links");
+    
+        hamburger.addEventListener("click", () => {
+            const isVisible = mobileLinks.style.display === "flex";
+            mobileLinks.style.display = isVisible ? "none" : "flex";
+        });
+    });
+        </script>
     </body>
 </html>

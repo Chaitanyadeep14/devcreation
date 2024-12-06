@@ -283,6 +283,10 @@
     transform: scale(1.1); /* Slight zoom effect */
 }
 
+#ccc{
+    margin-left: 35px;
+}
+
 /* Copyright Section */
 .footer-copyright {
     text-align: center;
