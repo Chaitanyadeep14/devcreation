@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Our Services</title>
         <link rel="stylesheet" href="services.css">
+        <link rel="stylesheet" href="header.css">
         <!-- Font Awesome Import -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-jLKHWMZoON/xLK+0ToVfxfJFrsMTELzZPzey5He18u3gfKmkeHsR/8VsYuK7EWiP" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/0cf1d6798b.js" crossorigin="anonymous"></script>
@@ -13,7 +14,88 @@
 
     </head>
     <body>
-        <div id="header"></div>
+        <!-- Desktop Navbar -->
+<nav class="navbar desktop-navbar">
+    <div class="navbar-logo">
+        <img src="./images/main-logo.png" alt="Company Logo" class="logo">
+    </div>
+    <div class="navbar-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <div class="nav-link dropdown">
+            Products
+            <div class="dropdown-menu">
+              <a href="t-shirts.html" class="mobile-dropdown-item">T-Shirts</a>
+              <a href="banners.html" class="mobile-dropdown-item">Banners</a>
+              <a href="badges.html" class="mobile-dropdown-item">Badges</a>
+              <a href="certificates.html" class="mobile-dropdown-item">Certificates</a>
+              <a href="letter-heads.html" class="mobile-dropdown-item">Letterheads</a>
+              <a href="visiting-cards.html" class="mobile-dropdown-item">Visiting-cards</a>
+              <a href="poster.html" class="mobile-dropdown-item">Posters</a>
+              <a href="broucher.html" class="mobile-dropdown-item">Broucher</a>
+              <a href="sticker.html" class="mobile-dropdown-item">stickers</a>
+              <a href="danglers.html" class="mobile-dropdown-item">Danglers</a>
+              <a href="id-cards.html" class="mobile-dropdown-item">Id-cards</a>
+              <a href="calender.html" class="mobile-dropdown-item">calender</a>
+  
+            </div>
+        </div>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+    </div>
+    <div class="navbar-icons">
+        <div class="icon">
+            <img src="./images/wishlist-icon.png" alt="Wishlist" title="Wishlist">
+        </div>
+        <div class="icon">
+            <img src="./images/cart-icon.png" alt="Cart" title="Cart">
+        </div>
+        <div class="icon">
+            <img src="./images/user-icon.png" alt="User Profile" title="Profile">
+        </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Navbar -->
+  <nav class="mobile-navbar">
+  <div class="mobile-navbar-container">
+    <div class="mobile-navbar-logo">
+        <img src="./images/main-logo.png" alt="Company Logo" class="logo">
+    </div>
+    <div class="mobile-navbar-hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+  </div>
+  <div class="mobile-navbar-links" id="mobile-navbar-links">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <div class="mobile-nav-link dropdown">
+        <span>Products</span>
+        <div class="mobile-dropdown-menu">
+          <a href="t-shirts.html" class="mobile-dropdown-item">T-Shirts</a>
+          <a href="banners.html" class="mobile-dropdown-item">Banners</a>
+          <a href="badges.html" class="mobile-dropdown-item">Badges</a>
+          <a href="certificates.html" class="mobile-dropdown-item">Certificates</a>
+          <a href="letter-heads.html" class="mobile-dropdown-item">Letterheads</a>
+          <a href="visiting-cards.html" class="mobile-dropdown-item">Visiting-cards</a>
+          <a href="poster.html" class="mobile-dropdown-item">Posters</a>
+          <a href="broucher.html" class="mobile-dropdown-item">Broucher</a>
+          <a href="sticker.html" class="mobile-dropdown-item">stickers</a>
+          <a href="danglers.html" class="mobile-dropdown-item">Danglers</a>
+          <a href="id-cards.html" class="mobile-dropdown-item">Id-cards</a>
+          <a href="calender.html" class="mobile-dropdown-item">calender</a>
+  
+        </div>
+    </div>
+    <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+    <a href="about.html" class="mobile-nav-link">About Us</a>
+    <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+  </div>
+  </nav>
+  
         <!-- Hero Banner Container -->
         <section class="hero-banner">
             <div class="overlay">
