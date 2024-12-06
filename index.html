@@ -14,12 +14,14 @@
 <body> 
 
    <!-- Video Preloader -->
+    <!-- Video Preloader -->
    <div id="video-preloader">
     <video id="preloader-video" autoplay muted playsinline>
       <source src="./images/Logo Clip.mp4" type="video/mp4">
-      <!-- Your browser does not support the video tag. -->
+      Your browser does not support the video tag.
     </video>
   </div>
+
 
     <div id="main-content" style="display: none;">
       <div id="header"></div>
@@ -27,9 +29,12 @@
          <!-- Desktop Carousel -->
     <div class="slider" style="position: relative; width: 100%; height: 80vh; overflow: hidden; display: none;">
       <div class="carousel" style="display: flex; height: 100%; width: 100%; transition: transform 0.3s ease-in-out;">
-        <div class="carousel-item active" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner1.svg');"></div>
+        <div class="carousel-item " style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner1.svg');"></div>
         <div class="carousel-item" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner2.svg');"></div>
         <div class="carousel-item" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner3.svg');"></div>
+        <div class="carousel-item active" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner4.svg');"></div>
+        <div class="carousel-item " style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner55.svg');"></div>
+        <div class="carousel-item " style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/devaraj tshirt.svg');"></div>
       </div>
       <button id="prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&lt;</button>
       <button id="next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&gt;</button>
@@ -37,12 +42,15 @@
         <span class="dot active" data-index="0" style="width: 10px; height: 10px; background-color: #000; border-radius: 50%; cursor: pointer;"></span>
         <span class="dot" data-index="1" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
         <span class="dot" data-index="2" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
+        <span class="dot" data-index="3" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
+        <span class="dot" data-index="4" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
+        <span class="dot" data-index="5" style="width: 10px; height: 10px; background-color: #fff; border-radius: 50%; cursor: pointer;"></span>
       </div>
     </div>
 
     <!-- Mobile Image -->
-    <div class="mobile-image" style="display: none; text-align: center; padding: 20px;  ;">
-      <img src="./images/banner1.svg" alt="Mobile Banner" style="max-width: 100%; height: 40vh; border-radius:10px">
+    <div class="mobile-image" style="display: none; text-align: center;" style="margin-bottom: 0;">
+      <img src="./images/phone1.jpg" alt="Mobile Banner" style="max-width: 100%; height: 40vh; ">
     </div>
 
       <div class="marquee-container">
@@ -76,7 +84,7 @@
             <div class="deal-text">
               <h2>Upgrade Your Wardrobe with Our Exclusive T-Shirts.</h2>
               <p>Shop now and enjoy our latest fashion finds.</p>
-              <button class="deal-button">Shop Now</button>
+              <button class="deal-button"style="font-weight: bold;">Shop Now</button>
             </div>
           </div>
           <div class="deal-card reverse">
@@ -86,13 +94,14 @@
             <div class="deal-text">
               <h2>Your Design, Your Badge - PERSONALIZE IT!</h2>
               <p>Enjoy a special discount on your first purchase.</p>
-              <button class="deal-button">Get discount</button>
+              <button class="deal-button" style="font-weight: bold;">Get discount</button>
+
             </div>
           </div>
         </div>
       </section>
 
-      <section class="explore">
+      <!-- <section class="explore">
         <div class="container">
           <h1>EXPLORE THE RANGE</h1>
           <p>Browse through our products</p>
@@ -113,13 +122,40 @@
           <div class="extra-products" style="display: none;">
             
             <div class="product-item"><h3>Posters</h3><img src="./images/poster.png" alt="Posters"></div>
-            <div class="product-item"><h3>Mugs</h3><img src="./images/mugs.svg" alt="Mugs"></div>
+            <div class="product-item"><h3>Brouchre</h3><img src="./images/mugs.svg" alt="Mugs"></div>
            
             <div class="product-item"><h3>Stickers</h3><img src="./images/sticker.png" alt="Stickers"></div>
-            <div class="product-item"><h3>Notebooks</h3><img src="./images/notebooks.svg" alt="Notebooks"></div>
+            <a href="danglers.html">
+            <div class="product-item"><h3>Danglers</h3><img src="./images/notebooks.svg" alt="Notebooks"></div>
+          </a>
             <a href="id-cards.html" style="text-decoration: none; color: inherit; ">
             <div class="product-item"><h3>ID Cards</h3><img src="./images/idcard.png" alt="ID Cards"></div></a>
             <div class="product-item"><h3>Table Calenders</h3><img src="./images/cal.svg" alt="Calenders"></div>
+          </div>
+          <button id="explore-more" class="explore-more-btn">Explore More</button>
+        </div>
+      </section> -->
+
+      <section class="explore">
+        <div class="container">
+          <h1>EXPLORE THE RANGE</h1>
+          <p>Browse through our products</p>
+          <div class="products" id="products-container">
+            
+            <div class="product-item"><h3>T-Shirts</h3><a href="t-shirts.html"><img src="./images/gt 1.svg" alt="T-Shirts"></a></div>
+            <div class="product-item"><h3>Badges</h3><a href="badges.html"><img src="./images/Clip path group.png" alt="Badges"></a></div>
+            <div class="product-item"><h3>Letterheads</h3><a href="letter-heads.html"><img src="./images/Letterhead.png" alt="Letterheads"></a></div>
+            <div class="product-item"><h3>Banners</h3><a href="banners.html"><img src="./images/banner.svg" alt="Banners"></a></div>
+            <div class="product-item"><h3>Visiting Cards</h3><a href="visiting-cards.html"><img src="./images/id2.png" alt="Visiting Cards"></a></div>
+            <div class="product-item"><h3>Certificates</h3><a href="certificates.html"><img src="./images/certi.svg" alt="Certificates"></a></div>
+          </div>
+          <div class="extra-products" style="display: none;">
+            <div class="product-item"><h3>Posters</h3><a href="poster.html"><img src="./images/poster.png" alt="Posters"></a></div>
+            <div class="product-item"><h3>Brouchre</h3><a href="broucher.html"><img src="./images/brouchre.png" alt="Brouchre"></a></div>
+            <div class="product-item"><h3>Stickers</h3><a href="sticker.html"><img src="./images/sticker.png" alt="Stickers"></a></div>
+            <div class="product-item"><h3>Danglers</h3><a href="danglers.html"><img src="./images/dangler.png" alt="Danglers"></a></div>
+            <div class="product-item"><h3>ID Cards</h3><a href="id-cards.html"><img src="./images/idcard.png" alt="ID Cards"></a></div>
+            <div class="product-item"><h3>Table Calenders</h3><a href="calender.html"><img src="./images/cal.svg" alt="Calenders"></a></div>
           </div>
           <button id="explore-more" class="explore-more-btn">Explore More</button>
         </div>

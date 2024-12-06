@@ -156,66 +156,200 @@
 }
 /* Media Queries for Footer */
 
-/* Extra Small Devices (Phones, max-width: 576px) */
+
+    
+    
+/* General Footer Styles */
+.footer {
+    font-family: 'Arial', sans-serif;
+    background-color: #424242; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Brand Section */
+.brand-section {
+    flex: 1;
+    text-align: center;
+}
+
+.logo {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.brand-section p {
+    font-size: 1.2rem;
+    color: #ff8b00; /* Highlight color */
+    margin: 0;
+}
+
+/* Subscription Section */
+.subscription-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.subscription-section .enquiry-text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+.submit-row button {
+    padding: 10px 20px;
+    background-color: #ff8b00; /* Highlight color */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-row button:hover {
+    background-color: #e67a00;
+    box-shadow: 0px 5px 15px rgba(255, 123, 0, 0.4);
+}
+
+/* Menu Section */
+.menu-section {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.menu-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ff8b00; /* Highlight color */
+}
+
+.menu-column a {
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px; /* Increased gap between links */
+}
+
+.menu-column a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Makes the icon white */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    filter: none;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Copyright Section */
+.footer-copyright {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-top: 1px solid #555555; /* Subtle border for separation */
+}
+
+/* Media Queries */
+
+/* Phones (max-width: 576px) */
 @media (max-width: 576px) {
     .footer-container {
-        flex-direction: column; /* Stack all sections vertically */
-        align-items: center; /* Center-align all content */
-        text-align: center; /* Align text to the center */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .brand-section, .menu-section {
-        width: 100%; /* Make each section take full width */
+        width: 100%;
     }
 
     .logo {
-        width: 150px; /* Adjust logo size for smaller screens */
+        width: 150px;
     }
 
     .menu-column {
-        margin-bottom: 20px; /* Add spacing between columns */
+        margin-bottom: 20px;
     }
 
     .menu-column h4 {
-        font-size: 1rem; /* Smaller headings */
+        font-size: 1rem;
     }
 
     .menu-column a {
-        font-size: 0.85rem; /* Adjust link size */
-        margin-bottom: 10px; /* Reduce spacing between links */
+        font-size: 0.85rem;
+        margin-bottom: 10px;
     }
 
-    .subscription-form input[type="email"] {
-        width: 90%; /* Increase input width for better usability */
-    }
-
-    .submit-row button {
-        font-size: 0.85rem; /* Adjust button size */
-        padding: 8px 16px;
+    .menu-column p {
+        font-size: 1rem;
+        word-wrap: break-word;
+        margin: 10px 0;
     }
 
     .social-icons img {
-        width: 18px; /* Slightly smaller icons */
+        width: 18px;
         height: 18px;
     }
 
     .footer-copyright {
-        font-size: 0.8rem; /* Smaller text for copyright */
-        padding: 15px;
+        font-size: 0.8rem;
     }
 }
 
-/* Medium Devices (Tablets, max-width: 768px) */
+/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Stack sections vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .menu-section {
-        display: grid; /* Use grid for better alignment */
-        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-        gap: 20px; /* Space between columns */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .menu-column {
@@ -223,7 +357,7 @@
     }
 
     .menu-column h4 {
-        font-size: 1.1rem; /* Slightly smaller headings */
+        font-size: 1.1rem;
     }
 
     .menu-column a {
@@ -231,57 +365,47 @@
     }
 
     .subscription-form input[type="email"] {
-        width: 80%; /* Adjust input width for better fit */
-    }
-
-    .social-icons {
-        gap: 10px; /* Reduce spacing between icons */
+        width: 80%;
     }
 }
 
-/* Large Devices (Desktops, max-width: 1200px) */
+/* Small Desktops (max-width: 1200px) */
 @media (max-width: 1200px) {
     .menu-section {
-        display: flex; /* Keep flex layout for larger screens */
-        flex-wrap: wrap; /* Allow wrapping if needed */
+        display: flex;
+        flex-wrap: wrap;
         gap: 30px;
     }
 
     .menu-column {
-        width: 45%; /* Reduce width to allow two columns */
-        text-align: left; /* Align text to the left */
+        width: 45%;
     }
 
     .brand-section {
-        text-align: left; /* Align brand section content to the left */
+        text-align: left;
     }
 
     .social-icons img {
-        width: 20px; /* Standard icon size */
+        width: 20px;
         height: 20px;
     }
 }
 
-/* Extra Large Devices (Widescreens, min-width: 1201px) */
+/* Widescreens (min-width: 1201px) */
 @media (min-width: 1201px) {
     .footer-container {
-        justify-content: space-between; /* Space out sections evenly */
+        justify-content: space-between;
     }
 
     .menu-section {
-        gap: 50px; /* Increase spacing for a more open layout */
+        gap: 50px;
     }
 
     .menu-column {
-        width: 22%; /* Four columns layout */
+        width: 22%;
     }
 
     .subscription-form input[type="email"] {
-        width: 300px; /* Wider input for larger screens */
-    }
-
-    .submit-row button {
-        font-size: 1rem;
-        padding: 10px 20px; /* Larger buttons for desktop */
+        width: 300px;
     }
 }

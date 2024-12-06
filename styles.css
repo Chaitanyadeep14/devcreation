@@ -57,7 +57,7 @@ body {
  
 }
 
-.carousel-item:nth-child(1) {
+.carousel-item:nth-child(5) {
   background-image: url('./images/banner1.svg'); /* Use optimized image formats */
 }
 
@@ -67,6 +67,15 @@ body {
 
 .carousel-item:nth-child(3) {
   background-image: url('./images/banner3.svg');
+}
+.carousel-item:nth-child(4) {
+  background-image: url('./images/banner4.svg');
+}
+.carousel-item:nth-child(1) {
+  background-image: url('./images/banner55.svg');
+}
+.carousel-item:nth-child(6) {
+  background-image: url('./images/devaraj tshirt.svg');
 }
 
 
@@ -276,6 +285,7 @@ body {
 
 /* marque code */
 .marquee-container {
+ 
     width: 100%;
     overflow: hidden;
     background: linear-gradient(to right, #ff8b00, #636466);
@@ -287,7 +297,7 @@ body {
   .marquee {
     display: flex;
     white-space: nowrap;
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
   }
 
   .marquee span {
@@ -464,6 +474,7 @@ body {
 
 .deal-button {
   background-color: #fff;
+
   color: #FFACB7;
   border: none;
   padding: 10px 20px;
