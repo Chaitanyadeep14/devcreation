@@ -101,19 +101,20 @@
 
    <!-- Video Preloader -->
     <!-- Video Preloader -->
-   <div id="video-preloader">
+   <!-- <div id="video-preloader">
     <video id="preloader-video" autoplay muted playsinline>
       <source src="./images/Logo Clip.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-  </div>
+  </div> -->
 
 
-    <div id="main-content" style="display: none;">
+  <div id="main-content" style="display: block;">
       
 
          <!-- Desktop Carousel -->
-    <div class="slider" style="position: relative; width: 100%; height: 80vh; overflow: hidden; display: none;">
+         <div class="slider" style="position: relative; width: 100%; height: 80vh; overflow: hidden; ">
+
       <div class="carousel" style="display: flex; height: 100%; width: 100%; transition: transform 0.3s ease-in-out;">
         <div class="carousel-item " style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner1.svg');"></div>
         <div class="carousel-item" style="width: 100%; height: 100%; flex-shrink: 0; background-size: cover; background-position: center; background-image: url('./images/banner2.svg');"></div>
@@ -225,31 +226,26 @@
    
     <script src="jQuery.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const preloader = document.getElementById("video-preloader");
-        const mainContent = document.getElementById("main-content");
-        const video = document.getElementById("preloader-video");
-        const videoPlayed = sessionStorage.getItem("videoPlayed");
-        const desktopCarousel = document.querySelector('.slider');
-        const mobileImage = document.querySelector('.mobile-image');
+      document.addEventListener("DOMContentLoaded", () => {
+    const desktopCarousel = document.querySelector('.slider');
+    const mobileImage = document.querySelector('.mobile-image');
 
-        if (videoPlayed === "true") {
-          preloader.style.display = "none";
-          mainContent.style.display = "block";
-        } else {
-          video.addEventListener("ended", () => {
-            preloader.style.display = "none";
-            mainContent.style.display = "block";
-            sessionStorage.setItem("videoPlayed", "true");
-          });
-        }
-        // Toggle carousel and image based on screen size
+    function updateDisplay() {
         if (window.innerWidth > 768) {
-          desktopCarousel.style.display = "block";
+            desktopCarousel.style.display = "block"; // Show carousel on desktop
+            mobileImage.style.display = "none"; // Hide mobile image on desktop
         } else {
-          mobileImage.style.display = "block";
+            desktopCarousel.style.display = "none"; // Hide carousel on smaller screens
+            mobileImage.style.display = "block"; // Show mobile image on smaller screens
         }
-      });
+    }
+
+    // Call the function on page load
+    updateDisplay();
+
+    // Listen for window resize events to dynamically adjust
+    window.addEventListener("resize", updateDisplay);
+});
 
       const dots = document.querySelectorAll('.dot');
       const carousel = document.querySelector('.carousel');
@@ -354,7 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
         const hamburger = document.getElementById("hamburger");
         const mobileLinks = document.getElementById("mobile-navbar-links");
     
