@@ -181,135 +181,67 @@ a:hover {
   .whatsapp-float:hover {
     background-color: #1ebd59;
   }
-  
-/* Responsive Design */
 
-/* Small Screens (Phones, max-width: 576px) */
+/* Phones (max-width: 576px) */
 @media (max-width: 576px) {
-    .hero-banner {
-        height: 250px;
-    }
-
-    .hero-banner h1 {
-        font-size: 28px;
-    }
-
-    .hero-banner p {
-        font-size: 14px;
+    .row {
+        flex-direction: column;
+        gap: 30px;
     }
 
     .service-box {
-        flex: 1 1 100%; /* Full width for service boxes */
-        height: auto; /* Allow dynamic height for smaller screens */
-        padding: 20px;
+        flex: 1 1 100%; /* Full width for each card */
+        padding: 20px 10px;
     }
 
-    .service-box h4 {
-        font-size: 1.2rem; /* Adjust heading size */
-    }
-
-    .service-box p {
-        font-size: 0.9rem; /* Adjust paragraph size */
-    }
-
-    .service-box a.get-started {
-        font-size: 0.8rem; /* Smaller button size */
-        padding: 6px 12px;
-    }
-}
-
-/* Medium Screens (Tablets, max-width: 768px) */
-@media (max-width: 768px) {
-    .hero-banner {
-        height: 300px;
-    }
-
-    .hero-banner h1 {
-        font-size: 36px;
-    }
-
-    .hero-banner p {
-        font-size: 16px;
-    }
-
-    .service-box {
-        flex: 1 1 calc(45% - 20px); 
-    }
-
-    .service-box h4 {
-        font-size: 1.3rem;
-    }
-
-    .service-box p {
+    h4 {
         font-size: 1rem;
     }
 
-    .service-box a.get-started {
+    p {
         font-size: 0.85rem;
-        padding: 7px 14px;
-    }
-}
-
-/* Large Screens (Desktops, max-width: 1200px) */
-@media (max-width: 1200px) {
-    .hero-banner {
-        height: 350px;
     }
 
-    .hero-banner h1 {
-        font-size: 40px;
+    .icon-container {
+        font-size: 1.8rem;
     }
 
-    .hero-banner p {
-        font-size: 18px;
-    }
-
-    .service-box {
-        flex: 1 1 calc(30% - 20px); /* Three columns layout */
-    }
-
-    .service-box h4 {
-        font-size: 1.4rem;
-    }
-
-    .service-box p {
-        font-size: 1rem;
-    }
-
-    .service-box a.get-started {
+    .get-started {
         font-size: 0.9rem;
-        padding: 8px 16px;
+        padding: 8px 15px;
     }
 }
 
-/* Extra Large Screens (Widescreens, min-width: 1201px) */
-@media (min-width: 1201px) {
-    .hero-banner {
-        height: 400px;
-    }
-
-    .hero-banner h1 {
-        font-size: 48px;
-    }
-
-    .hero-banner p {
-        font-size: 20px;
-    }
-
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
     .service-box {
-        flex: 1 1 calc(25% - 20px); /* Four columns if space allows */
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
     }
 
-    .service-box h4 {
-        font-size: 1.5rem;
-    }
-
-    .service-box p {
+    h4 {
         font-size: 1.1rem;
     }
 
-    .service-box a.get-started {
+    .icon-container {
+        font-size: 2rem;
+    }
+}
+
+/* Small Desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .service-box {
+        flex: 1 1 calc(33.333% - 20px); /* Three items per row */
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .get-started {
         font-size: 1rem;
-        padding: 10px 20px;
     }
 }

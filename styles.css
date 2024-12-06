@@ -285,7 +285,7 @@ body {
 
 /* marque code */
 .marquee-container {
- 
+  
     width: 100%;
     overflow: hidden;
     background: linear-gradient(to right, #ff8b00, #636466);
