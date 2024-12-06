@@ -77,26 +77,29 @@
         </div>
     </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const navbarLinks = document.getElementById('mobile-navbar-links');
-            const dropdowns = document.querySelectorAll('.mobile-nav-link.dropdown');
+    
+       <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navbarLinks = document.getElementById('mobile-navbar-links');
+        const dropdowns = document.querySelectorAll('.mobile-nav-link.dropdown');
 
-            // Toggle the hamburger menu
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('open');
-                navbarLinks.classList.toggle('open');
-            });
+        // Toggle the hamburger menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navbarLinks.classList.toggle('open');
+        });
 
-            // Toggle dropdown menus
-            dropdowns.forEach(dropdown => {
-                const menu = dropdown.querySelector('.mobile-dropdown-menu');
-                dropdown.addEventListener('click', () => {
-                    menu.classList.toggle('open');
-                });
+        // Toggle dropdown menus
+        dropdowns.forEach(dropdown => {
+            const menu = dropdown.querySelector('.mobile-dropdown-menu');
+            dropdown.addEventListener('click', () => {
+                menu.classList.toggle('open');
             });
         });
-    </script>
+    });
+</script>
+
+    
 </body>
 </html>
