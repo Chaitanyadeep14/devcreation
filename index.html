@@ -190,12 +190,11 @@
 
       
 
-      <section class="explore">
+      <!-- <section class="explore">
         <div class="container">
           <h1>EXPLORE THE RANGE</h1>
           <p>Browse through our products</p>
           <div class="products" id="products-container">
-            
             <div class="product-item"><h3>T-Shirts</h3><a href="t-shirts.html"><img src="./images/gt 1.svg" alt="T-Shirts"></a></div>
             <div class="product-item"><h3>Badges</h3><a href="badges.html"><img src="./images/Clip path group.png" alt="Badges"></a></div>
             <div class="product-item"><h3>Letterheads</h3><a href="letter-heads.html"><img src="./images/Letterhead.png" alt="Letterheads"></a></div>
@@ -213,7 +212,62 @@
           </div>
           <button id="explore-more" class="explore-more-btn">Explore More</button>
         </div>
-      </section>
+      </section> -->
+
+      <div class="category-section">
+        <h2>Shop by Category</h2>
+        <div class="categories">
+          <div class="category-card">
+            <a href="t-shirts.html"><img src="./images/gt 1.svg" alt="T-Shirts"></a>
+            <p>T-Shirts</p>
+          </div>
+          <div class="category-card">
+            <a href="badges.html"><img src="./images/Clip path group.png" alt="Badges"></a>
+            <p>Badges</p>
+          </div>
+          <div class="category-card">
+            <a href="letter-heads.html"><img src="./images/Letterhead.png" alt="Letterheads"></a>
+            <p>Letterheads</p>
+          </div>
+          <div class="category-card">
+            <a href="banners.html"><img src="./images/banner.svg" alt="Banners"></a>
+            <p>Banners</p>
+          </div>
+          <div class="category-card">
+            <a href="visiting-cards.html"><img src="./images/id2.png" alt="Visiting Cards"></a>
+            <p>Visiting Cards</p>
+          </div>
+          <div class="category-card">
+            <a href="certificates.html"><img src="./images/certi.svg" alt="Certificates"></a>
+            <p>Certificates</p>
+          </div>
+          <div class="category-card additional hidden">
+            <a href="poster.html"><img src="./images/poster.png" alt="Posters"></a>
+            <p>Posters</p>
+          </div>
+          <div class="category-card additional hidden">
+            <a href="broucher.html"><img src="./images/brouchre.png" alt="Brouchre"></a>
+            <p>Brochure</p>
+          </div>
+          <div class="category-card additional hidden">
+            <a href="sticker.html"><img src="./images/sticker.png" alt="Stickers"></a>
+            <p>Stickers</p>
+          </div>
+          <div class="category-card additional hidden">
+            <a href="danglers.html"><img src="./images/dangler.png" alt="Danglers"></a>
+            <p>Danglers</p>
+          </div>
+          <div class="category-card additional hidden">
+            <a href="id-cards.html"><img src="./images/idcard.png" alt="ID Cards"></a>
+            <p>ID Cards</p>
+          </div>
+          <div class="category-card additional hidden">
+            <a href="calender.html"><img src="./images/cal.svg" alt="Calenders"></a>
+            <p>Table Calendars</p>
+          </div>
+        </div>
+        <a href="#category-section" class="see-all" onclick="toggleCategories()">See all</a>
+      </div>
 
        <!-- WhatsApp Floating Icon -->
     <a href="https://wa.me/+919945250080" class="whatsapp-float" target="_blank">
@@ -360,6 +414,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
+    function toggleCategories() {
+  // Select additional categories
+  const additionalCategories = document.querySelectorAll('.category-card.additional');
+  
+  // Toggle their visibility
+  additionalCategories.forEach(category => {
+    category.classList.toggle('hidden');
+  });
+
+  // Update the button text
+  const seeAllButton = document.querySelector('.see-all');
+  if (seeAllButton.textContent === 'See all') {
+    seeAllButton.textContent = 'Show less';
+  } else {
+    seeAllButton.textContent = 'See all';
+  }
+}
     </script>
 </body>
 </html>

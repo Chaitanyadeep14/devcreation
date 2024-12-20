@@ -109,8 +109,8 @@ a:hover {
 }
 
 .service-box .icon-container {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 95px;
     margin: 0 auto 20px;
     background: #ff8b00;
     border-radius: 50%;
@@ -127,6 +127,24 @@ a:hover {
     transform: scale(1.1);
     background: #636466;
 }
+.fas.fa-calendar-alt {
+    height: 60px; 
+    width: 65px;
+    line-height: 50px; 
+    border-radius: 50%;
+    display: inline-block; 
+    font-size: 40px; 
+}
+
+.fas.fa-chalkboard-teacher{
+    height: 60px; 
+    width: 65px;
+    line-height: 50px; 
+    border-radius: 50%;
+    display: inline-block; 
+    font-size: 30px; 
+}
+
 
 .service-box h4 {
     font-size: 1.5rem;
