@@ -275,15 +275,15 @@ section p {
 .card-img-wrapper img {
   width: 100%;
   height: 300px; /* Set a fixed height for all images */
-  transition: filter 0.5s ease;
-  filter: grayscale(100%);
+  /* transition: filter 0.5s ease;
+  filter: grayscale(100%); */
   object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
 
 
-.card-img-wrapper img:hover {
+/* .card-img-wrapper img:hover {
   filter: grayscale(0%);
-}
+} */
 
 .social-icon {
   background: #111;
@@ -303,6 +303,62 @@ section p {
 .social-icon:hover i {
   color: #003ef5;
 }
+
+/* Flip Card Styles */
+.card {
+  perspective: 1000px; /* Enables the 3D effect */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg); /* Flips the card */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back side when not visible */
+  border-radius: 10px;
+}
+
+.card-front {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+  background: #ff8b00;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform: rotateY(180deg); /* Positions the back side for flipping */
+}
+
+.card-back h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-back p {
+  font-size: 1rem;
+  text-align: center;
+}
+
 
 .card-content-wrapper {
   padding: 1.5rem;
