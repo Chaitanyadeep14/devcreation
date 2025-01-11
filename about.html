@@ -141,29 +141,30 @@
 
     <main class="team-section">
         <section class="team">
-            <h2>Our Team</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, praesentium veritatis voluptatibus ut consequuntur quas consequatur omnis id rem obcaecati.</p>
+            <h2 style="color: #FF8b00;font-size: 50px;">Our Team</h2>
+            
             <div class="cards">
 
                 <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./images/founder.png" alt="Dev Creations and Solutions founder">
-                    </div>
-                    <!-- <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a> -->
-                    <div class="card-content-wrapper">
-                        <a href="#" class="card-content">
-                            <h3>Mr. Devaraj H M</h3>
+                <div class="cards">
+                    <div class="card" onclick="flipCard(this)">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="card-img-wrapper">
+                            <img src="./images/founder.png" alt="Founder">
+                          </div>
+                          <div class="card-content-wrapper">
+                            <h3>Devaraj H M</h3>
                             <p>Founder & CEO</p>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                </svg>
-                            </div>
-                        </a>
+                          </div>
+                        </div>
+                        <div class="card-back">
+                          <h3>Devaraj H M</h3>
+                          <p>Responsible for developing user-friendly interfaces, implementing designs, and enhancing user experiences.</p>
+                        </div>
+                      </div>
                     </div>
-                </div>
-
+                  </div>
                 <!-- Card 2 -->
                 <div class="card">
                     <div class="card-img-wrapper">
@@ -265,7 +266,7 @@
     </main>
 
     <section id="collaborators" class="collaborators-section">
-        <h2>Our Clients</h2>
+        <h2 style="color: #FF8b00;font-size: 50px;">Our Clients</h2>
         <div class="slider">
             <div class="slides">
                 <div class="slide">
@@ -283,6 +284,8 @@
             </div>
         </div>
     </section>
+
+  
     
     
     
@@ -357,6 +360,14 @@
             mobileLinks.style.display = isVisible ? "none" : "flex";
         });
     });
+
+
+
+
+    function flipCard(cardElement) {
+        cardElement.classList.toggle('flipped');
+      }
+      
     </script>
     
 
